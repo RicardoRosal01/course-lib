@@ -16,8 +16,7 @@ router.get('/',async (req,res) => {
         })
     } catch {
         res.redirect('/')
-    }
-    
+    }    
 })
 
 //new author router

@@ -12,6 +12,7 @@ const BodyParser = require('body-parser')
 //importando as rotas
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const booksRouter = require('./routes/books')
 
 //configurações da aplicação
 app.set('view engine','ejs') 
@@ -30,6 +31,7 @@ db.once('open',() => console.log('Conectado ao mongoose'))
 //inserindo as rotas
 app.use('/',indexRouter.router)
 app.use('/authors',authorRouter.router)
+app.use('/books',booksRouter.router)
 
 app.listen(process.env.PORT || 3014,()=>{
     console.log(`servidor rodando na porta ${process.env.PORT}`)
