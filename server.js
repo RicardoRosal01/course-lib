@@ -8,6 +8,7 @@ const app = express()
 const expressLayouts = require ('express-ejs-layouts')
 const mongoose = require('mongoose')
 const BodyParser = require('body-parser')
+const methodOverride = require('method-override')
 
 //importando as rotas
 const indexRouter = require('./routes/index')
@@ -21,6 +22,7 @@ app.set('layout','layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(BodyParser.urlencoded({limit:'10mb',extended:false}))
+app.use(methodOverride('_method'))
 
 //conectando no banco de dados
 mongoose.connect(process.env.DATABASE_URL,{ useNewUrlParser:true,useUnifiedTopology:true})
