@@ -3,6 +3,8 @@
 @import 'shared/header.css';
 @import 'shared/butons.css';
 @import 'shared/form.css';
+@import 'shared/author.css';
+@import 'shared/book.css';
 
 :root {
     font-family: 'Gotham Rounded';
@@ -16,4 +18,8 @@ body {
 
 *,*::before,*::after{
     box-sizing: border-box;
+}
+
+.error-message{
+    color: hsl(var(--color-danger-hue), 100%, 50%);
 }
