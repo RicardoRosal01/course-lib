@@ -1,8 +1,8 @@
 <h2 class=page-header><%= author.name %></h2>
-<span>
+<div class="form-row btn-row">
     <a href="/authors/<%= author.id %>/edit" class="btn btn-primary">Edit</a>
     <%- include('../partials/deleteForm',{ url: `/authors/${author.id}` }) %>
-</span>
+</div>
 <% if (booksByAuthor.length > 0) { %>
     <h2>Books by Authors</h2>
 <% } %>

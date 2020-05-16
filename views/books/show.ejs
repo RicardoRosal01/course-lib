@@ -12,6 +12,8 @@
 <span>
     <h3>Description: <%= book.description %></h3>
 </span>
-<a href="/books/<%= book.id %>/edit" class="btn btn-primary">Edit</a>
-<%- include('../partials/deleteForm',{ url: `/books/${book.id}` }) %>
-<a href="/authors/<%= book.author.id %>" class="btn btn-primary">View Author</a>
+<div class="form-row btn-row form-row-end">
+    <a href="/books/<%= book.id %>/edit" class="btn btn-primary">Edit</a>
+    <%- include('../partials/deleteForm',{ url: `/books/${book.id}` }) %>
+    <a href="/authors/<%= book.author.id %>" class="btn btn-primary">View Author</a>
+</div>

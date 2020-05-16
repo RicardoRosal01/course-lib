@@ -2,5 +2,7 @@
 
 <form action="/books/<%= book.id %>?_method=PUT" method="POST">
     <%- include('./_form_fields.ejs')%>
-    <a href="/books" class="btn btn-danger">Cancel</a>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <div class="btn-row form-row form-row-end">
+        <a href="/books" class="btn btn-danger">Cancel</a>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
